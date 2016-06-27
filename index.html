@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=640, user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/index.js" charset="UTF-8"></script>
+</head>
+<body>
+<div class="music" id="music">
+    <audio id="audioFir" src="audioFile/nizhan.mp3" preload="none" loop/>
+</div>
+<img class="slide" src="img/p1_slide.png" alt="">
+<div id="main">
+    <ul id="list">
+        <li>
+            <div class="a0">
+                <img class="round" src="img/p1_round.png" alt="">
+                <img class="round1" src="img/p1_round1.png" alt="">
+                <img class="me" src="img/p1_me.png" alt="">
+                <em class="word1">致HR：我的表白书</em>
+                <em class="word2 animated bounceInRight">追求者：肖广华</em>
+                <p class="p1 animated bounceInLeft"></p>
+                <p class="job animated rubberBand">求职web前端^-^攻城狮</p>
+                <p class="chance">给我一个机会 还您一份惊喜</p>
+                <div class="know">
+                    <img src="img/p1_block.png" alt="">
+                    <p class="knowP1">进 一 步 了 解</p>
+                    <img class="knowImg1 " src="img/p1_tri.png" alt="">
+                    <img class="knowImg2" src="img/p1_tri.png" alt="">
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="a1">
+                <img class="p2_ball" src="img/p2_ball.png" alt="">
+                <img class="p2_ball2" src="img/p2_ball.png" alt="">
+                <p class="content animated flip">Content</p>
+                <img class="p2_one" src="img/p2_one.png" alt="">
+                <p class="p2_oneP">个 人 信 息</p>
+                <img class="p2_two" src="img/p2_two.png" alt="">
+                <p class="p2_twoP">专 业 技 能</p>
+                <img class="p2_three" src="img/p2_three.png" alt="">
+                <p class="p2_threeP">工 作 经 验</p>
+                <img class="p2_four" src="img/p2_four.png" alt="">
+                <p class="p2_fourP">联 系 方 式</p>
+            </div>
+        </li>
+        <li>
+            <div class="a3">
+                <img class="p3_far animated slideInUp" src="img/p3_bg2.jpg" alt="">
+                <p class="myInfo">myInfo</p>
+                <img class="p3_speak" src="img/p3_speak.png" alt="">
+                <p class="p3_obj animated bounceInRight">var obj={</p>
+                <p class="p3_name animated bounceInRight">name: "肖广华"</p>
+                <p class="p3_sch animated bounceInRight">school: "华北理工大学"</p>
+                <p class="p3_edu animated bounceInRight">education: "本科"</p>
+                <p class="p3_exp animated bounceInRight">experince: "2年"</p>
+                <p class="p3_add animated bounceInRight">address: "北京"</p>
+                <p class="p3_age animated bounceInRight">age: "25"</p>
+                <p class="p3_obj2 animated bounceInRight">}</p>
+                <img class="p3_ball" src="img/p3_child.png">
+            </div>
+        </li>
+        <li class="a4">
+            <img class="p4_face" src="img/p4_face.png" alt="">
+            <img class="p4_border animated swing" src="img/p4_border.png" alt="">
+            <p class="p4_get animated bounceInRight">GET 技能</p>
+            <p class="p4_circle"></p>
+            <p class="p4_bg1 animated bounceInUp">JS</p>
+            <p class="p4_bg2 animated bounceInRight">HTML5</p>
+            <p class="p4_bg3 animated bounceInDown">CSS3</p>
+            <p class="p4_bg4 animated bounceInLeft ">AJAX</p>
+            <img class="p4_right animated rubberBand" src="img/p4_right.png">
+        </li>
+        <li class="a6">
+            <img class="p6_heart" src="img/p6_heart.png" alt="">
+            <em class="ok animated animated bounceInRight" >心动就约起来吧！</em>
+            <p class="word animated bounceInLeft">I'm waiting for you</p>
+            <img class="p6_phone animated bounceInLeft" src="img/p6_phone.png" alt="">
+            <p class="p6_phone1 animated bounceInRight">18713208510</p>
+            <img class="p6_qq animated bounceInLeft" src="img/p6_qq.png" alt="">
+            <p class="p6_qq1 animated bounceInRight">1042920812</p>
+            <img class="p6_mail animated bounceInLeft" src="img/p6_mail.png" alt="">
+            <p class="p6_mail1 animated bounceInRight">1042920812@qq.com</p>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    ~function () {
+        var music = document.getElementById("music"), audioFir = document.getElementById("audioFir");
+        window.setTimeout(function () {
+            audioFir.play();
+            audioFir.addEventListener("canplay", function () {
+                music.style.display = "block";
+                music.className = "music musicMove";
+            }, false);
+        }, 500);
+        music.addEventListener("click", function () {
+            if (audioFir.paused) {
+                audioFir.play();
+                music.className = "music musicMove";
+                return;
+            }
+            audioFir.pause();
+            music.className = "music";
+        }, false);
+    }();
+</script>
+</body>
+</html>
